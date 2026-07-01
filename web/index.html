@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>News Notify</title>
+
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#0f0f14" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="News" />
+  <link rel="apple-touch-icon" href="icons/icon-192.png" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>News Notify</h1>
+    <div class="topbar-meta">
+      <span id="lastUpdated" class="last-updated">Loading…</span>
+      <button id="refreshBtn" class="icon-btn" aria-label="Refresh">⟳</button>
+    </div>
+  </header>
+
+  <nav id="topicChips" class="topic-chips" aria-label="Filter by topic"></nav>
+
+  <main id="feed" class="feed">
+    <p id="emptyState" class="empty-state" hidden>No digest available yet. Pull to refresh once the backend has run.</p>
+  </main>
+
+  <div id="detailOverlay" class="detail-overlay" hidden>
+    <div class="detail-card">
+      <button id="detailClose" class="icon-btn detail-close" aria-label="Close">✕</button>
+      <div id="detailBody"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

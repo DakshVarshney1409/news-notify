@@ -1,0 +1,18 @@
+name = "news-notify"
+main = "src/index.ts"
+compatibility_date = "2025-01-01"
+
+[triggers]
+crons = ["0 0 * * *"]
+
+[[kv_namespaces]]
+binding = "NEWS_DIGEST"
+id = "aa023ae8fcea4585aaea3bcb3f657465"
+preview_id = "2e424a0ec8d84973bfb36040e4a7cf3b"
+
+# Secrets (set via `wrangler secret put <NAME>`, do not put values here):
+#   GEMINI_API_KEY
+#   GNEWS_API_KEY
+#   ALPHA_VANTAGE_API_KEY
+#   FOOTBALL_DATA_API_KEY
+#   DEBUG_SECRET   (any random string you pick, used to protect /debug/run)
