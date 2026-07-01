@@ -204,6 +204,10 @@ body {
   z-index: 100;
 }
 
+.detail-overlay[hidden] {
+  display: none;
+}
+
 .detail-card {
   position: relative;
   width: 100%;
